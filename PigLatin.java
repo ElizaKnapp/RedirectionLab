@@ -2,10 +2,15 @@ import java.util.*;
 
 public class PigLatin {
   public static void main(String[] args) {
-    //quick test pl 2
+    //quick test pl 3
     System.out.println(pigLatinBest("apple"));
     System.out.println(pigLatinBest("banana"));
     System.out.println(pigLatinBest("check"));
+    System.out.println(pigLatinBest("*emu"));
+    System.out.println(pigLatinBest("fish!"));
+    System.out.println(pigLatinBest("apple%"));
+
+
 
   }
 
