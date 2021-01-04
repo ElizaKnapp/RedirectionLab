@@ -2,6 +2,7 @@ import java.util.*;
 
 public class PigLatin {
   public static void main(String[] args) {
+    /*
     //quick test pl 3
     System.out.println(pigLatinBest("apple"));
     System.out.println(pigLatinBest("banana"));
@@ -9,6 +10,16 @@ public class PigLatin {
     System.out.println(pigLatinBest("*emu"));
     System.out.println(pigLatinBest("fish!"));
     System.out.println(pigLatinBest("apple%"));
+    */
+    Scanner in = new Scanner (System.in);
+    while (in.hasNextLine()) {
+      Scanner line = new Scanner(in.nextLine());
+      while (line.hasNext()) {
+        System.out.print(pigLatinBest(line.next()));
+        System.out.print(" ");
+      }
+      System.out.println();
+    }
 
 
 
@@ -22,6 +33,7 @@ public class PigLatin {
   }
 
   public static String pigLatin(String s) {
+    if (s.length() == 1) return s;
     String[] digraphs = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr",
                           "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc",
                           "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th",
@@ -35,6 +47,7 @@ public class PigLatin {
   }
 
   public static String pigLatinBest(String s) {
+    if (s.length() == 1) return s;
     char first = s.charAt(0);
     char last = s.charAt(s.length() - 1);
     if (!((65 <= last && last <= 90) || (97 <= last && last <= 122) || (48 <= last && last <= 57))) {
