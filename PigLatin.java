@@ -11,12 +11,9 @@ public class PigLatin {
 
   public static String pigLatinSimple(String s) {
     char first = s.charAt(0);
-    if (first == 'a' || first == 'e' || first == 'i' || first == 'o' || first == 'u') {
+    if (first == 'a' || first == 'e' || first == 'i' || first == 'o' || first == 'u')
       return s + "hay";
-    }
-    else {
-      return s.substring(1) + first + "ay";
-    }
+    else return s.substring(1) + first + "ay";
   }
 
   public static String pigLatin(String s) {
@@ -26,17 +23,10 @@ public class PigLatin {
                           "tr", "tw", "wh", "wr"};
     String first2 = s.substring(0, 2);
     boolean containsDi = false;
-    for (int i = 0; i < digraphs.length; i++) {
-      if (first2.equals(digraphs[i])) {
-        containsDi = true;
-      }
-    }
-    if (containsDi) {
-      return s.substring(2) + first2 + "ay";
-    }
-    else {
-      return pigLatinSimple(s);
-    }
+    for (int i = 0; i < digraphs.length; i++) 
+      if (first2.equals(digraphs[i])) containsDi = true;
+    if (containsDi) return s.substring(2) + first2 + "ay";
+    else return pigLatinSimple(s);
 
   }
 
