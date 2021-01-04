@@ -2,9 +2,11 @@ import java.util.*;
 
 public class PigLatin {
   public static void main(String[] args) {
-    //quick test pl 1
-    System.out.println(pigLatinSimple("apple"));
-    System.out.println(pigLatinSimple("banana"));
+    //quick test pl 2
+    System.out.println(pigLatin("apple"));
+    System.out.println(pigLatin("banana"));
+    System.out.println(pigLatin("check"));
+
   }
 
   public static String pigLatinSimple(String s) {
