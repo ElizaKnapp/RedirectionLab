@@ -26,6 +26,7 @@ public class PigLatin {
   }
 
   public static String pigLatinSimple(String s) {
+    s = s.toLowerCase();
     char first = s.charAt(0);
     if (first == 'a' || first == 'e' || first == 'i' || first == 'o' || first == 'u')
       return s + "hay";
@@ -33,6 +34,7 @@ public class PigLatin {
   }
 
   public static String pigLatin(String s) {
+    s = s.toLowerCase();
     if (s.length() == 1) return s;
     String[] digraphs = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr",
                           "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc",
@@ -47,6 +49,7 @@ public class PigLatin {
   }
 
   public static String pigLatinBest(String s) {
+    s = s.toLowerCase();
     if (s.length() == 1) return s;
     char first = s.charAt(0);
     char last = s.charAt(s.length() - 1);
