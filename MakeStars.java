@@ -10,7 +10,7 @@ public class MakeStars {
         for (int i = 0; i < j; i++) {
           System.out.print("*");
         }
-        System.out.print(" ");
+        System.out.print(" "); //figure out how not to have an extra space
       }
       System.out.println();
     }
