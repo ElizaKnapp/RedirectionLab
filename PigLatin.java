@@ -16,9 +16,9 @@ public class PigLatin {
       Scanner line = new Scanner(in.nextLine());
       while (line.hasNext()) {
         System.out.print(pigLatinBest(line.next()));
-        System.out.print(" "); //how do you get rid of the last space?
+        if (line.hasNext()) System.out.print(" ");
       }
-      System.out.println();
+      if (in.hasNext()) System.out.println();
     }
 
 
