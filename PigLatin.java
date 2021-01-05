@@ -11,6 +11,10 @@ public class PigLatin {
     System.out.println(pigLatinBest("fish!"));
     System.out.println(pigLatinBest("apple%"));
     */
+    System.out.println(pigLatinSimple("b"));
+    System.out.println(pigLatinSimple("aby"));
+    System.out.println(pigLatinBest("*emu!"));
+
     Scanner in = new Scanner (System.in);
     while (in.hasNextLine()) {
       Scanner line = new Scanner(in.nextLine());
@@ -52,14 +56,14 @@ public class PigLatin {
     s = s.toLowerCase();
     char first = s.charAt(0);
     char last = s.charAt(s.length() - 1);
+    if (!((65 <= first && first <= 90) || (97 <= first && first <= 122)))
+      return s;
+
     if (!((65 <= last && last <= 90) || (97 <= last && last <= 122) || (48 <= last && last <= 57)) && s.length() != 1) {
       char save = last;
       s = s.substring(0, s.length() - 1);
       return pigLatin(s) + save;
     }
-
-    if (!((65 <= first && first <= 90) || (97 <= first && first <= 122)))
-      return s;
     else return pigLatin(s);
   }
 
